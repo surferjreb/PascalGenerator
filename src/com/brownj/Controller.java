@@ -6,7 +6,7 @@ public class Controller {
 
     public Controller(){
         myGenerator = new StatementGenerator();
-        System.out.println("Controller created");
+       // System.out.println("Controller created");
 
     }
 
@@ -14,8 +14,12 @@ public class Controller {
         //this will start the program
 
         try {
-            System.out.println("Controller running");
+          //  System.out.println("Controller running");
             myList = StatementList.getStatementsInstance();
+
+            myGenerator.buildCodeBlock();
+
+            myList.printStatementList();
         }
         catch(Exception e){
             e.printStackTrace();
